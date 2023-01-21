@@ -26,6 +26,7 @@ class CreateComicsTable extends Migration
         });
     }
 
+
     /**
      * Reverse the migrations.
      *
