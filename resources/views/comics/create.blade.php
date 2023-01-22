@@ -7,31 +7,31 @@
         @csrf()
         <div class="mb-3">
             <label for="title" class="form-label">Titolo</label>
-            <input type="text" class="form-control" id="city" name="city">
+            <input type="text" class="form-control" id="title" name="title">
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <input type="text" class="form-control" id="street" name="street">
+            <input type="text" class="form-control" id="description" name="description">
+        </div>
+        <div class="mb-3">
+            <label for="thumb" class="form-label">Immagine</label>
+            <input type="text" class="form-control" id="thumb" name="thumb">
         </div>
         <div class="mb-3">
             <label for="price" class="form-label">Prezzo</label>
             <input type="number" class="form-control" id="price" name="price">
         </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="is_rent"name="is_rent" value="1">
-            <label class="form-check-label" for="is_rent">Vendita</label>
-        </div>
         <div class="mb-3">
             <label for="series" class="form-label">Serie</label>
-            <input type="text" class="form-control" id="street" name="street">
+            <input type="text" class="form-control" id="series" name="series">
         </div>
         <div class="mb-3">
             <label for="sale_date" class="form-label">Data di vendita</label>
-            <input type="date" class="form-control" id="free_from" name="free_from">
+            <input type="date" class="form-control" id="sale_date" name="sale_date">
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Tipo</label>
-            <input type="text" class="form-control" id="street" name="street">
+            <input type="text" class="form-control" id="type" name="type">
         </div>
 
         <button type="submit" class="btn btn-primary">Salva</button>
