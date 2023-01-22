@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@home')->name('home');
+Route::get('/', 'PageController@home')->name('home'); // homepage del sito (per i visitatori)
+Route::get('/dashboard', 'PageController@dashboard')->name('dashboard'); // dashboard dell'amministratore
+
+Route::resource('comics', 'ComicController');
