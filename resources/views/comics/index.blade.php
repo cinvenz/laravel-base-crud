@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+    @if (session('success_delete'))
+        <div class="alert alert-success">
+            {{-- {{ session('success_delete') }} --}}
+            Il post con id {{ session('success_delete') }} e' stato eliminato correttamente
+        </div>
+    @endif
     <table class="table table-warning table-hover">
         <thead>
         <tr>
@@ -15,6 +21,7 @@
             <th scope="col">Type</th>
             <th scope="col">Buy</th>
             <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -27,13 +34,22 @@
                     <td>{{ $comic->type }}</td>
                     <td>
                         <a href="{{ route('comics.show', [
-                            'comic' => $comic->id
+                            'comic' => $comic
                         ]) }}" class="btn btn-primary">Compra</a>
                     </td>
                     <td>
                         <a href="{{ route('comics.edit', [
-                            'comic' => $comic->id
+                            'comic' => $comic
                         ]) }}" class="btn btn-success">Edita</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('comics.destroy', [
+                            'comic' => $comic
+                        ]) }}" method="post">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-danger">Elimina</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

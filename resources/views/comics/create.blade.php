@@ -14,7 +14,8 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Descrizione</label>
-            <input type="text" class="form-control" id="description" name="description">
+            {{-- <input type="text" class="form-control" id="description" name="description"> --}}
+            <textarea class="d-block w-100 border rounded" name="description" id="description" cols="30" rows="10"></textarea>
         </div>
         <div class="mb-3">
             <label for="thumb" class="form-label">URL Img</label>

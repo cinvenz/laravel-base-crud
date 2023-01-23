@@ -13,4 +13,7 @@
         <li class="mb-4"><span class="fw-bold">Data di vendita:</span>  {{$comic->sale_date}}</li>
         <li class="mb-4"><span class="fw-bold">Tipo</span>  {{$comic->type}}</li>
     </ul>
+    <div class="actions">
+        <a href="{{ route('comics.edit', ['comic' => $comic])}}" class="btn btn-success">Edita</a>
+    </div>
 @endsection
