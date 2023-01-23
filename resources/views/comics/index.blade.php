@@ -6,6 +6,11 @@
 
 @section('content')
     @if (session('success_delete'))
+
+        <script>
+            document.queryse
+        </script>
+
         <div class="alert alert-success">
             {{-- {{ session('success_delete') }} --}}
             Il post con id {{ session('success_delete') }} e' stato eliminato correttamente
@@ -35,7 +40,7 @@
                     <td>
                         <a href="{{ route('comics.show', [
                             'comic' => $comic
-                        ]) }}" class="btn btn-primary">Compra</a>
+                        ]) }}" class="btn btn-primary">Visita</a>
                     </td>
                     <td>
                         <a href="{{ route('comics.edit', [
