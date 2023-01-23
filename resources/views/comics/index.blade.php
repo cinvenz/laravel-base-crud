@@ -1,9 +1,11 @@
 @extends('layouts.base')
 
-@section('title', 'Comics Page')
+@section('title')
+    <div class="container text-center mt-3 mb-3">Comics page</div>
+@endsection
 
 @section('content')
-    <table class="table table-dark table-hover">
+    <table class="table table-warning table-hover">
         <thead>
         <tr>
             <th scope="col">ID</th>
@@ -12,6 +14,7 @@
             <th scope="col">Series</th>
             <th scope="col">Type</th>
             <th scope="col">Buy</th>
+            <th scope="col">Edit</th>
         </tr>
         </thead>
         <tbody>
@@ -26,6 +29,11 @@
                         <a href="{{ route('comics.show', [
                             'comic' => $comic->id
                         ]) }}" class="btn btn-primary">Compra</a>
+                    </td>
+                    <td>
+                        <a href="{{ route('comics.edit', [
+                            'comic' => $comic->id
+                        ]) }}" class="btn btn-success">Edita</a>
                     </td>
                 </tr>
             @endforeach

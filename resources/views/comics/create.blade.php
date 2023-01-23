@@ -1,6 +1,9 @@
 @extends('layouts.base')
 
-@section('title', 'Inserisci un nuovo fumetto')
+
+@section('title')
+    <div class="container ps-2 mt-3 mb-3">Inserisci un nuovo fumetto</div>
+@endsection
 
 @section('content')
     <form method="post" action="{{ route('comics.store') }}">
@@ -14,7 +17,7 @@
             <input type="text" class="form-control" id="description" name="description">
         </div>
         <div class="mb-3">
-            <label for="thumb" class="form-label">Immagine</label>
+            <label for="thumb" class="form-label">URL Img</label>
             <input type="text" class="form-control" id="thumb" name="thumb">
         </div>
         <div class="mb-3">
