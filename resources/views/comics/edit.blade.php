@@ -6,8 +6,9 @@
 @endsection
 
 @section('content')
-    <form method="post" action="{{ route('comics.store') }}">
+    <form method="post" action="{{ route('comics.update', ['comic' => $comic]) }}">
         @csrf()
+        @method('put')
         <div class="mb-3">
             <label for="title" class="form-label fw-bold">Titolo</label>
             <input type="text" class="form-control" id="title" name="title" value="{{$comic->title}}">
