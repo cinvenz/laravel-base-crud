@@ -3,3 +3,22 @@
 li {
     list-style: none;
 }
+
+.overlay {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background-color: rgba($color: salmon, $alpha: 0.7);
+}
+
+.delete-confirmation {
+    margin: auto;
+    max-width: 300px;
+    max-height: 200px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.active {
+    display: none;
+}

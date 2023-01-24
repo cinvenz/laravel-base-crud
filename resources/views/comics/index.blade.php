@@ -4,12 +4,12 @@
     <div class="container text-center mt-3 mb-3">Comics page</div>
 @endsection
 
-@section('content')
-    @if (session('success_delete'))
 
-        <script>
-            document.queryse
-        </script>
+
+@section('content')
+
+
+    @if (session('success_delete'))
 
         <div class="alert alert-success">
             {{-- {{ session('success_delete') }} --}}
@@ -48,16 +48,16 @@
                         ]) }}" class="btn btn-success">Edita</a>
                     </td>
                     <td>
-                        <form action="{{ route('comics.destroy', [
-                            'comic' => $comic
-                        ]) }}" method="post">
-                            @method('DELETE')
-                            @csrf
-                            <button class="btn btn-danger">Elimina</button>
-                        </form>
+
+                        <button class="btn btn-danger btn-delete-me" data-id="{{ $comic->id }}">Elimina</button>
+
                     </td>
                 </tr>
+
+
             @endforeach
         </tbody>
     </table>
+
+    @include('partials.delete_confirmation')
 @endsection
